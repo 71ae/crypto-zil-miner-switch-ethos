@@ -28,7 +28,7 @@ EOO
 sleep 5
 
 sudo apt-get-ubuntu update
-sudo apt-get-ubuntu install liblwp-protocol-https-perl libjson-perl libjson-xs-perl
+sudo apt-get-ubuntu install libwww-perl liblwp-protocol-https-perl libjson-perl libjson-xs-perl
 
 bash <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-installer-for-ethos/master/miner-manager) phoenixminer install
 
