@@ -16,12 +16,12 @@ This little set of scripts makes sure your rig monitors the proof-of-work
 (PoW) start time, and when required stops your main miner, fires up the
 ZIL miner, and switches back to your main miner afterwards.
 
-In the background the script checks the block height of the ZIL blockchain
-every this and then in a loop in a decreasing interval. Once the block 99
-is hit, the background sleep stops, the main miner is disallowed and the
-mining for ZIL started for 5 minutes. After this period the ZIL miner
-terminates automatically, the main miner is started again, and the loop
-starts again.
+In the background a script checks the block height of the ZIL blockchain
+every this and then in a loop by calling the Zilliqa API in a decreasing
+interval. Once the block 99 is hit, the background sleep stops, the main
+miner is disallowed and the mining for ZIL starts for 5 minutes. After
+this period the ZIL miner terminates automatically, the main miner is
+launched again, and the loop starts from the beginning.
 
 ## Getting Started
 
