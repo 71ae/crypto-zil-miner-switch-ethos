@@ -39,7 +39,7 @@ You are limited to installing 15 miners an hour as this script makes
 
 ## Author
 
-* @71ae - Andreas E.
+* [@71ae](https://github.com/71ae) - Andreas E.
 
 If you find this helpful, a small donation always is welcome
 (every coin helps):
@@ -53,6 +53,6 @@ If you find this helpful, a small donation always is welcome
 
 ## License
 
-This project is licensed under the MIT License - see the (LICENSE) file
-for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE)
+file for details.
 
