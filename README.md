@@ -10,9 +10,18 @@ algorithm for only less than 5 minutes roughly each 2.5 hours allows the
 owner of the ethOS rig to mine their other preferred coins throughout
 the rest of the time.
 
+### Description
+
 This little set of scripts makes sure your rig monitors the proof-of-work
 (PoW) start time, and when required stops your main miner, fires up the
 ZIL miner, and switches back to your main miner afterwards.
+
+In the background the script checks the block height of the ZIL blockchain
+every this and then in a loop in a decreasing interval. Once the block 99
+is hit, the background sleep stops, the main miner is disallowed and the
+mining for ZIL started for 5 minutes. After this period the ZIL miner
+terminates automatically the main miner is started again, and the loop
+starts again.
 
 ## Getting Started
 
@@ -22,7 +31,8 @@ within just a few minutes.
 
 ### Prerequisites
 
-You need to be running a mining rig with ethOS 1.3.3 installed.
+You need to be running a mining rig with [ethOS](http://ethosdistro.com) 1.3.3
+installed.
 
 You need to own a wallet address for ZIL.
 
