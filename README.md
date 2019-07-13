@@ -45,6 +45,7 @@ You need to own a wallet address for ZIL.
 For running this script we're making use of the following components:
 
 * Bash, Perl, and curl
+* [Miner Manager for ethOS](https://github.com/cynixx3/third-party-miner-installer-for-ethos)
 * [PhoenixMiner](https://phoenix-miner.github.io)
 * libwww-perl (LWP)
 * JSON for perl
