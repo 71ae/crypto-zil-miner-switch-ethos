@@ -20,7 +20,7 @@ In the background the script checks the block height of the ZIL blockchain
 every this and then in a loop in a decreasing interval. Once the block 99
 is hit, the background sleep stops, the main miner is disallowed and the
 mining for ZIL started for 5 minutes. After this period the ZIL miner
-terminates automatically the main miner is started again, and the loop
+terminates automatically, the main miner is started again, and the loop
 starts again.
 
 ## Getting Started
@@ -38,6 +38,19 @@ You need to own a wallet address for ZIL.
 
 ### Installation
 
+...
+
+#### Utilization
+
+For running this script we're making use of the following components:
+
+* Bash, Perl, and curl
+* [PhoenixMiner](https://phoenix-miner.github.io)
+* libwww-perl (LWP)
+* JSON for perl
+
+The installation script makes sure that these tools are installed, if
+they aren't part of ethOS yet.
 
 ### Configuration
 
