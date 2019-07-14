@@ -25,9 +25,9 @@ launched again, and the loop starts from the beginning.
 
 ## Getting Started
 
-These instructions and the scripts are designed for ease of use.
-Follow them carefully and you shall have your ZIL mining up and running
-within just a few minutes.
+In this version some manual tasks for the configuration is still required.
+If you follow the instructions carefully you shall have your ZIL mining up
+and running within just a few minutes.
 
 ### Prerequisites
 
@@ -38,7 +38,11 @@ You need to own a wallet address for ZIL.
 
 ### Installation
 
-...
+Run the following command in your ethOS shell:
+
+```
+bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/ZIL-1/install-zil.sh)
+```
 
 #### Utilization
 
@@ -55,6 +59,22 @@ they aren't part of ethOS yet.
 
 ### Configuration
 
+After the installation please edit the pool and wallet configuration!
+```
+nano zil-miner-switch/minerpool.txt
+```
+
+After you've done this, you can start this toolsuite with:
+```
+sh zil-miner-switch/zil-init.sh
+```
+
+To make sure the ZIL Mining Switcher also starts when you power on your rig,
+you also can add the following line into custom.sh (execute `nano custom.sh`)
+before the "exit" line:
+```
+bash -c zil-miner-switch/zil-init.sh
+```
 
 ### Farms
 
