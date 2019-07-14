@@ -33,7 +33,7 @@ cd crypto-zil-miner-switch-ethos
 git checkout ZIL-1
 
 cd ~
-mkdir -f zil-miner-switch
+mkdir zil-miner-switch
 cp -p crypto-zil-miner-switch-ethos/* zil-miner-switch/
 cp -p crypto-zil-miner-switch-ethos/src/* zil-miner-switch/
 
