@@ -30,8 +30,8 @@ bash <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-insta
 cd ~
 git clone https://github.com/71ae/crypto-zil-miner-switch-ethos.git 
 cd crypto-zil-miner-switch-ethos
-git checkout ZIL-1
 
+# Copy files to target directory
 cd ~
 mkdir zil-miner-switch
 cp -p crypto-zil-miner-switch-ethos/* zil-miner-switch/
