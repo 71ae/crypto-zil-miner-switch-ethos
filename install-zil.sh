@@ -37,7 +37,9 @@ mkdir zil-miner-switch
 cp -p crypto-zil-miner-switch-ethos/* zil-miner-switch/
 cp -p crypto-zil-miner-switch-ethos/src/* zil-miner-switch/
 
+# Clean up
 rm -rf crypto-zil-miner-switch-ethos
+sudo apt-get-ubuntu -qq clean
 
 cat <<EOO
 
