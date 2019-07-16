@@ -16,11 +16,18 @@ perl ${HOME}/zil-miner-switch/zil-waitfor-pow.pl
 disallow
 minestop
 
+# Wait a few seconds
+sleep 15
+
+# Read config
 source ${HOME}/zil-miner-switch/mineropts.txt
 source ${HOME}/zil-miner-switch/minerpool.txt
 
 # Start PhoenixMiner for ZIL Mining for 5 Minutes
-/opt/miners/phoenixminer/PhoenixMiner -pool ${POOL} -wal ${WALLET} -proto 2 -gsi 15 -log 2 -logfile /run/miner.output -rmode 0 -timeout 5 ${OPTS}
+/opt/miners/phoenixminer/PhoenixMiner -pool ${POOL} -wal ${WALLET} -proto 2 -gsi 15 -log 1 -logfile /run/miner.output -rmode 0 -timeout 5 ${OPTS}
+
+# Wait a few seconds
+sleep 5
 
 # Restart EthOS Miner
 allow

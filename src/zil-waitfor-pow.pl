@@ -31,26 +31,22 @@ while ($loop) {
 
   if ($res->is_error) {
     print "ERROR $res->code: reading Zilliqa API ($res->message)\n";
-    $sleep = $sleep / 2 - 0.1;
+    $sleep = $sleep * 0.7 - 0.1;
   }
   else { # Decode result
     my $json = $res->decoded_content . "\n";
     my $obj = from_json($json);
     $currentBlock = $obj->{'result'}->{'NumTxBlocks'};
     $powToGo = int($currentBlock/100)*100+99 - $currentBlock;
-    $sleep = $powToGo * (rand(20)+50)/100 - 0.1;
+    $sleep = $powToGo * (rand(30)+50)/100 - 0.1;
   }
 
   print localtime(time) . ": ZIL $currentBlock / PoW $powToGo / " . int($sleep) . " mins \n";
 
-  if ($powToGo <= 1) {
+  if ( ($powToGo <= 1) or ($sleep < 0.3) ) {
     $sleep = 0;
     $loop = 0;
     break;
-  }
-
-  if ($sleep <= 3) {
-    $sleep = $sleep * (rand(20)+50)/100;
   }
 
   my $wait = $sleep * 60;
