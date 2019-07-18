@@ -26,6 +26,9 @@ sudo apt-get-ubuntu -qq -y install libwww-perl liblwp-protocol-https-perl libjso
 
 bash <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-installer-for-ethos/master/miner-manager) phoenixminer install
 
+# Kill existing Switch Loop
+pkill zil-loop.sh
+
 # Download ZIL Mining Switch for ethOS
 cd ~
 git clone https://github.com/71ae/crypto-zil-miner-switch-ethos.git 
