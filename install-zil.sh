@@ -33,9 +33,15 @@ cd crypto-zil-miner-switch-ethos
 
 # Copy files to target directory
 cd ~
-mkdir zil-miner-switch
+[ ! -d zil-miner-switch ] || mkdir zil-miner-switch
 cp -p crypto-zil-miner-switch-ethos/* zil-miner-switch/
 cp -p crypto-zil-miner-switch-ethos/src/* zil-miner-switch/
+if [ ! -e zil-miner-switch/mineropts.txt]; then
+  cp -p crypto-zil-miner-switch-ethos/config/mineropts.txt zil-miner-switch/
+fi
+if [ ! -e zil-miner-switch/minerpool.txt]; then
+  cp -p crypto-zil-miner-switch-ethos/config/minerpool.txt zil-miner-switch/
+fi
 
 # Clean up
 rm -rf crypto-zil-miner-switch-ethos
