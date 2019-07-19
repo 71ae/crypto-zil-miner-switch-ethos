@@ -44,19 +44,6 @@ Run the following command in your ethOS shell:
 bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/ZIL-1/install-zil.sh)
 ```
 
-#### Utilization
-
-For running this script we're making use of the following components:
-
-* Bash, Perl, and curl
-* [Miner Manager for ethOS](https://github.com/cynixx3/third-party-miner-installer-for-ethos)
-* [PhoenixMiner](https://phoenix-miner.github.io)
-* libwww-perl (LWP)
-* JSON for perl
-
-The installation script makes sure that these tools are installed, if
-they aren't part of ethOS yet.
-
 ### Configuration
 
 After the installation please edit the pool and wallet configuration!
@@ -76,10 +63,40 @@ before the "exit" line:
 bash -c zil-miner-switch/zil-init.sh
 ```
 
+### Upgrading
+
+If you already have this ZIL Mining Switch tool installed before,
+it's recommended to make a backup of the config files `minerpool.txt`
+and `mineropts.txt` before upgrading. The installer tries to keep them
+untouched, though.
+
+Some upgrades may come with changes in the mineropts. To make sure to
+use the latest options you may want to remove the file (after you've
+taken a backup):
+```
+rm zil-miner-switch/mineropts.txt
+```
+
+For upgrading just run the installer command shown in the installation
+section of this document.
+
 ### Farms
 
 You are limited to installing 15 miners an hour as this script makes
 4 GitHub calls per install. Use authenticated requests if you require more.
+
+## Utilization
+
+For running this script we're making use of the following components:
+
+* Bash, Perl, and curl
+* [Miner Manager for ethOS](https://github.com/cynixx3/third-party-miner-installer-for-ethos)
+* [PhoenixMiner](https://phoenix-miner.github.io)
+* libwww-perl (LWP)
+* JSON for perl
+
+The installation script makes sure that these tools are installed, if
+they aren't part of ethOS yet.
 
 ## Author
 

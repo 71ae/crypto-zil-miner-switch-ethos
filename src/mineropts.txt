@@ -1,1 +1,0 @@
-OPTS="-cdmport 3334 -ftimeout 240 -worker zilminer -ftimeout 240 -retrydelay 5"

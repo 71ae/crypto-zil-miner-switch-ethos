@@ -26,6 +26,9 @@ sudo apt-get-ubuntu -qq -y install libwww-perl liblwp-protocol-https-perl libjso
 
 bash <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-installer-for-ethos/master/miner-manager) phoenixminer install
 
+# Kill existing Switch Loop
+pkill zil-loop.sh
+
 # Download ZIL Mining Switch for ethOS
 cd ~
 git clone https://github.com/71ae/crypto-zil-miner-switch-ethos.git 
@@ -33,9 +36,15 @@ cd crypto-zil-miner-switch-ethos
 
 # Copy files to target directory
 cd ~
-mkdir zil-miner-switch
+[ ! -d zil-miner-switch ] || mkdir zil-miner-switch
 cp -p crypto-zil-miner-switch-ethos/* zil-miner-switch/
 cp -p crypto-zil-miner-switch-ethos/src/* zil-miner-switch/
+if [ ! -e zil-miner-switch/mineropts.txt]; then
+  cp -p crypto-zil-miner-switch-ethos/config/mineropts.txt zil-miner-switch/
+fi
+if [ ! -e zil-miner-switch/minerpool.txt]; then
+  cp -p crypto-zil-miner-switch-ethos/config/minerpool.txt zil-miner-switch/
+fi
 
 # Clean up
 rm -rf crypto-zil-miner-switch-ethos

@@ -1,0 +1,1 @@
+OPTS="-cdmport 3334 -ftimeout 240 -ftimeout 240 -retrydelay 5"
