@@ -41,7 +41,7 @@ You need to own a wallet address for ZIL.
 Run the following command in your ethOS shell:
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/ZIL-1/install-zil.sh)
+bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/install-zil.sh)
 ```
 
 ### Configuration
