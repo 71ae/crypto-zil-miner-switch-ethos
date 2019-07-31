@@ -45,7 +45,7 @@ Run the following command in your ethOS shell:
 
 ```
 sudo apt-get-ubuntu install curl
-bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/install-zil.sh)
+bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.0/install-zil.sh)
 ```
 
 ### Configuration
@@ -83,7 +83,7 @@ rm zil-miner-switch/mineropts.txt
 
 For upgrading just run the installer command again.
 ```
-bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/install-zil.sh)
+bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.0/install-zil.sh)
 ```
 
 ### Verification
