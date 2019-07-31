@@ -16,6 +16,9 @@ This little set of scripts makes sure your rig monitors the proof-of-work
 (PoW) start time, and when required stops your main miner, fires up the
 ZIL miner, and switches back to your main miner afterwards.
 
+We're not utilizing the 'native' Zilliqa mining setup here. Instead a
+mining pool will be used for simplicity.
+
 In the background a script checks the block height of the ZIL blockchain
 every this and then in a loop by calling the Zilliqa API in a decreasing
 interval. Once the block 99 is hit, the background sleep stops, the main
@@ -41,6 +44,7 @@ You need to own a wallet address for ZIL.
 Run the following command in your ethOS shell:
 
 ```
+sudo apt-get-ubuntu install curl
 bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/install-zil.sh)
 ```
 
@@ -77,8 +81,10 @@ taken a backup):
 rm zil-miner-switch/mineropts.txt
 ```
 
-For upgrading just run the installer command shown in the installation
-section of this document.
+For upgrading just run the installer command again.
+```
+bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/install-zil.sh)
+```
 
 ### Farms
 
