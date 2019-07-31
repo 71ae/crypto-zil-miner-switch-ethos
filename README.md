@@ -41,7 +41,7 @@ You need to own a wallet address for ZIL.
 
 ### Installation
 
-Run the following command in your ethOS shell:
+Run the following commands in your ethOS shell:
 
 ```
 sudo apt-get-ubuntu install curl
