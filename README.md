@@ -86,6 +86,28 @@ For upgrading just run the installer command again.
 bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/install-zil.sh)
 ```
 
+### Verification
+
+To verify that this toolsuite is running, you can fire this command:
+```
+pgrep -fl zil
+```
+The output should show exactly these three commands (the numbers in front
+are irrelevant):
+```
+3415 screen
+3419 zil-loop.sh
+18251 perl
+```
+
+If you are an experienced user, you may enter into the background screen:
+```
+screen -r zil
+```
+Make sure to exit this screen with `Ctrl-a d`. Do not keep it open for
+longer than necessary, and do NOT do a `Ctrl-c`, as this likely would
+stop the switcher.
+
 ### Farms
 
 You are limited to installing 15 miners an hour as this script makes
