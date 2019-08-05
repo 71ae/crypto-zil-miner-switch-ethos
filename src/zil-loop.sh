@@ -2,12 +2,31 @@
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/ethos/bin:/opt/ethos/sbin"
 
+case "$-" in
+  *i*)
+      INTERACTIVE=1
+      ;;
+  *)
+      INTERACTIVE=0
+      ;;
+esac
+
 # Make sure EthOS Miner is allowed for now
 allow
 
 # Loop forever
 while :
 do
+
+# Ensure script is not running more than once
+for pid in $(pgrep -f $(basename $0)); do
+  if [ $pid != $$ ]; then
+    if [ "$INTERACTIVE" == "1" ]; then
+      echo "[$(date)]: Process is already running with PID $pid"
+    fi
+    exit 1
+  fi
+done
 
 # Wait for Zilliqa ZIL PoW Time
 perl ${HOME}/zil-miner-switch/zil-waitfor-pow.pl
