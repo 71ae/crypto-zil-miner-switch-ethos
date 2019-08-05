@@ -20,7 +20,8 @@ do
 
 # Ensure script is not running more than once
 for pid in $(pgrep -f $(basename $0)); do
-  if [ $pid != $$ ]; then
+  status=$(ps ax | grep $pid | grep SCREEN)
+  if [[ -z $status ]] && [[ $pid != $$ ]]; then
     if [ "$INTERACTIVE" == "1" ]; then
       echo "[$(date)]: Process is already running with PID $pid"
     fi
