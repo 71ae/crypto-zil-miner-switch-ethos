@@ -44,7 +44,6 @@ You need to own a wallet address for ZIL.
 Run the following commands in your ethOS shell:
 
 ```
-sudo apt-get-ubuntu install curl
 bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.0/install-zil.sh)
 ```
 
@@ -57,7 +56,7 @@ nano zil-miner-switch/minerpool.txt
 
 After you've done this, you can start this toolsuite with:
 ```
-sh zil-miner-switch/zil-init.sh
+bash zil-miner-switch/zil-init.sh
 ```
 
 To make sure the ZIL Mining Switcher also starts when you power on your rig,
