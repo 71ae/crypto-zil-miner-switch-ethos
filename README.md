@@ -44,7 +44,7 @@ You need to own a wallet address for ZIL.
 Run the following commands in your ethOS shell:
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.0/install-zil.sh)
+bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.1/install-zil.sh)
 ```
 
 ### Configuration
@@ -82,7 +82,7 @@ rm zil-miner-switch/mineropts.txt
 
 For upgrading just run the installer command again.
 ```
-bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.0/install-zil.sh)
+bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.1/install-zil.sh)
 ```
 
 ### Verification
