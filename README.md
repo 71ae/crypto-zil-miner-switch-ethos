@@ -41,11 +41,10 @@ You need to own a wallet address for ZIL.
 
 ### Installation
 
-Run the following command in your ethOS shell:
+Run the following commands in your ethOS shell:
 
 ```
-sudo apt-get-ubuntu install curl
-bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.0/install-zil.sh)
+bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.1/install-zil.sh)
 ```
 
 ### Configuration
@@ -57,7 +56,7 @@ nano zil-miner-switch/minerpool.txt
 
 After you've done this, you can start this toolsuite with:
 ```
-sh zil-miner-switch/zil-init.sh
+bash zil-miner-switch/zil-init.sh
 ```
 
 To make sure the ZIL Mining Switcher also starts when you power on your rig,
@@ -83,7 +82,7 @@ rm zil-miner-switch/mineropts.txt
 
 For upgrading just run the installer command again.
 ```
-bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.0/install-zil.sh)
+bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.1/install-zil.sh)
 ```
 
 ### Verification

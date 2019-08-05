@@ -9,6 +9,15 @@ allow
 while :
 do
 
+# Ensure script is not running more than once
+for pid in $(pgrep -f $(basename $0)); do
+  status=$(ps ax | grep $pid | grep SCREEN)
+  if [[ -z $status ]] && [[ $pid != $$ ]]; then
+    echo "[$(date)]: Process is already running with PID $pid"
+    exit 1
+  fi
+done
+
 # Wait for Zilliqa ZIL PoW Time
 perl ${HOME}/zil-miner-switch/zil-waitfor-pow.pl
 
