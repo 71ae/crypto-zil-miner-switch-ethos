@@ -2,15 +2,6 @@
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/ethos/bin:/opt/ethos/sbin"
 
-case "$-" in
-  *i*)
-      INTERACTIVE=1
-      ;;
-  *)
-      INTERACTIVE=0
-      ;;
-esac
-
 # Make sure EthOS Miner is allowed for now
 allow
 
@@ -22,9 +13,7 @@ do
 for pid in $(pgrep -f $(basename $0)); do
   status=$(ps ax | grep $pid | grep SCREEN)
   if [[ -z $status ]] && [[ $pid != $$ ]]; then
-    if [ "$INTERACTIVE" == "1" ]; then
-      echo "[$(date)]: Process is already running with PID $pid"
-    fi
+    echo "[$(date)]: Process is already running with PID $pid"
     exit 1
   fi
 done
