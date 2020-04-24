@@ -1,2 +1,2 @@
-POOL="pool.zil.farm:3333"
+POOL="us1-zil.shardpool.io:3333"
 WALLET="zil19pa7mefxhal7jeda0p6agft5cxc97gfcnl55e0"

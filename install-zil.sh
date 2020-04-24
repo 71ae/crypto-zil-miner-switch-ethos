@@ -31,7 +31,7 @@ pkill zil-loop.sh
 
 # Download ZIL Mining Switch for ethOS
 cd ~
-git clone https://github.com/71ae/crypto-zil-miner-switch-ethos.git 
+git clone --depth 1 https://github.com/71ae/crypto-zil-miner-switch-ethos.git 
 cd crypto-zil-miner-switch-ethos
 
 # Copy files to target directory
