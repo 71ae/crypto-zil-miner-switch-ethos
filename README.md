@@ -82,7 +82,7 @@ rm zil-miner-switch/mineropts.txt
 
 For upgrading just run the installer command again.
 ```
-bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.2/install-zil.sh)
+bash <(curl -s https://raw.githubusercontent.com/71ae/crypto-zil-miner-switch-ethos/v1.3/install-zil.sh)
 ```
 
 ### Verification
