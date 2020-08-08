@@ -134,7 +134,7 @@ sub waitForEndOfPoW {
 
 
 sub switchMinerForZil {
-  system("cp -p /home/ethos/remote.conf /home/ethos/remote.conf.zilswitch.orig");
+  system("mv /home/ethos/remote.conf /home/ethos/remote.conf.zilswitch.orig");
   system("echo '# local ZIL config only' > /home/ethos/remote.conf");
   system("cp -p /home/ethos/local.conf /home/ethos/local.conf.zilswitch.orig");
   system("cp /home/ethos/local-zil.conf /home/ethos/local.conf");
@@ -144,8 +144,16 @@ sub switchMinerForZil {
 
 
 sub revertMiner {
-  system("cp -p /home/ethos/local.conf.zilswitch.orig /home/ethos/local.conf");
-  system("cp -p /home/ethos/remote.conf.zilswitch.orig /home/ethos/remote.conf");
+  if (-e '/home/ethos/local-ethos.conf') {
+    system("cp -p /home/ethos/local-ethos.conf /home/ethos/local.conf");
+  } else {
+    system("cp -p /home/ethos/local.conf.zilswitch.orig /home/ethos/local.conf");
+  }
+  if (-e '/home/ethos/remote-ethos.conf') {
+    system("cp -p /home/ethos/remote-ethos.conf /home/ethos/remote.conf");
+  } else {
+    system("cp -p /home/ethos/remote.conf.zilswitch.orig /home/ethos/remote.conf");
+  }
   system("/opt/ethos/bin/minestop");
   &log("INFO: switch Miner to ORIG primary mining");
 }
